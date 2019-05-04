@@ -2,6 +2,7 @@
   <section class="container">
     <div>
       <logo />
+      <pictures />
       <h1 class="title">
         dissemination
       </h1>
@@ -25,10 +26,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Pictures from '~/components/Pictures.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Pictures
   }
 }
 </script>
