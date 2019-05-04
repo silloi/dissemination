@@ -1,12 +1,14 @@
 <template>
   <section class="container">
     <div>
-      <logo />
       <h1 class="title">
-        dissemination
+        La Dissémination
       </h1>
+      <headel />
+      <frame />
+      <logo />
       <h2 class="subtitle">
-        the installation of my broken heart
+        the installation art
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green"
@@ -19,16 +21,21 @@
           >GitHub</a
         >
       </div>
+      <h3>(c) 2019 Sillos Silloi All rights Reserved.</h3>
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Headel from '~/components/Headel.vue'
+import Frame from '~/components/Frame.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Headel,
+    Frame
   }
 }
 </script>
