@@ -1,32 +1,42 @@
 <template>
-  <ul>
-    <h2>{{ pictures[counter].date }}</h2>
-    <li v-for="(picture, index) in pictures" :key="index">
-      <span>{{ picture.date }}</span>
-      <span><img src="{ picture.img_src }"/></span>
-    </li>
-  </ul>
+  <article>
+    <h2 class="subtitle">{{ number }}</h2>
+    <div class="pictureWrapper">
+      <img class="picture" :src="pictures[counter].img_src" />
+      <div class="frameWrapper">
+        <img class="frame" src="/img/frame.png" @click="increment" />
+      </div>
+    </div>
+    <span class="date">
+      <button v-if="decrementable" class="button--green" @click="decrement">
+        &lt;
+      </button>
+      {{ pictures[counter].date }}
+      <button v-if="incrementable" class="button--green" @click="increment">
+        &gt;
+      </button>
+    </span>
+  </article>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   computed: {
-    pictures() {
-      return this.$store.state.Pictures.list
-    },
-    counter() {
-      return this.$store.state.Pictures.counter
-    }
+    ...mapState({
+      pictures: state => state.Pictures.list,
+      counter: state => state.Pictures.counter,
+      number: state => state.Pictures.list.length - state.Pictures.counter - 1,
+      decrementable: state => state.Pictures.counter > 0,
+      incrementable: state =>
+        state.Pictures.list.length - 1 > state.Pictures.counter
+    })
   },
   methods: {
-    addTodo(e) {
-      this.$store.commit('pictures/add', e.target.value)
-      e.target.value = ''
-    },
     ...mapMutations({
-      toggle: 'pictures/toggle'
+      increment: 'Pictures/increment',
+      decrement: 'Pictures/decrement'
     })
   }
 }
@@ -35,5 +45,48 @@ export default {
 <style>
 .done {
   text-decoration: line-through;
+}
+.pictureWrapper {
+  position: relative;
+  top: 50%;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.frameWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+.frame {
+  width: 400px;
+  height: 400px;
+}
+
+.picture {
+  width: 280px;
+  height: 280px;
+}
+
+.date {
+  display: block;
+  font-weight: 300;
+  font-size: 36px;
+  color: #35495e;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
 }
 </style>
