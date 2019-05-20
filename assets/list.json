@@ -1,0 +1,10 @@
+[
+  { "date" : 20190501,
+    "picture" : "~/assets/myicon.jpg",
+    "caption" : "now"
+  },
+  { "date" : 20190430,
+    "picture" : "~/assets/myicon.jpg",
+    "caption" : "pre"
+  }
+]

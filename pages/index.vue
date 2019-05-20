@@ -2,9 +2,10 @@
   <section class="container">
     <div>
       <h1 class="title">
-        La Dissémination
+        Dissémination
       </h1>
       <pictures />
+      <footer>&copy; 2019 Sillos Silloi All Right Reserved.</footer>
     </div>
   </section>
 </template>
@@ -49,5 +50,9 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+footer {
+  padding: 20px 20px 20px;
 }
 </style>

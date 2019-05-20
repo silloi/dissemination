@@ -7,15 +7,17 @@
         <img class="frame" src="/img/frame.png" @click="increment" />
       </div>
     </div>
-    <span class="date">
-      <button v-if="decrementable" class="button--green" @click="decrement">
+    <div class="dateWrapper">
+      <button class="button--green" @click="decrement">
         &lt;
       </button>
-      {{ pictures[counter].date }}
-      <button v-if="incrementable" class="button--green" @click="increment">
+      <div class="date">
+        {{ pictures[counter].date }}
+      </div>
+      <button class="button--green" @click="increment">
         &gt;
       </button>
-    </span>
+    </div>
   </article>
 </template>
 
@@ -27,10 +29,7 @@ export default {
     ...mapState({
       pictures: state => state.Pictures.list,
       counter: state => state.Pictures.counter,
-      number: state => state.Pictures.list.length - state.Pictures.counter - 1,
-      decrementable: state => state.Pictures.counter > 0,
-      incrementable: state =>
-        state.Pictures.list.length - 1 > state.Pictures.counter
+      number: state => state.Pictures.list.length - state.Pictures.counter - 1
     })
   },
   methods: {
@@ -61,7 +60,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -200px;
+  margin-top: -202px;
   margin-left: -200px;
 }
 
@@ -75,11 +74,22 @@ export default {
   height: 280px;
 }
 
-.date {
-  display: block;
+.dateWrapper {
+  display: flex;
+  justify-content: center;
   font-weight: 300;
   font-size: 36px;
   color: #35495e;
+  padding: 0 20px 20px;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 36px;
+  color: #35495e;
+  margin: 0px 48px 0px;
 }
 
 .subtitle {
