@@ -5,7 +5,7 @@
         Dissémination
       </h1>
       <pictures />
-      <footer>&copy; 2019 Sillos Silloi All Right Reserved.</footer>
+      <footer>&copy; 2019 Sillos Silloi All Rights Reserved.</footer>
     </div>
   </section>
 </template>
