@@ -2,8 +2,8 @@ export const state = () => ({
   list: [
     // { date: 20190605, img_src: '/img/20190605.jpg', caption: '' },
     // { date: 20190604, img_src: '/img/20190604.jpg', caption: '' },
-    // { date: 20190603, img_src: '/img/20190603.jpg', caption: '' },
-    // { date: 20190602, img_src: '/img/20190602.jpg', caption: '' },
+    { date: 20190603, img_src: '/img/20190603.jpg', caption: '' },
+    { date: 20190602, img_src: '/img/20190602.jpg', caption: '' },
     { date: 20190601, img_src: '/img/20190601.jpg', caption: '' },
     { date: 20190531, img_src: '/img/20190531.jpg', caption: '' },
     { date: 20190530, img_src: '/img/20190530.jpg', caption: '' },
