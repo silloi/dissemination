@@ -1,6 +1,6 @@
 # dissemination
 
-> the installation of my broken heart
+> the installation of my heart
 
 ## Build Setup
 
