@@ -7,7 +7,7 @@ export const state = () => ({
     // { date: 20190613, img_src: '/img/20190613.jpg', caption: '' },
     // { date: 20190612, img_src: '/img/20190612.jpg', caption: '' },
     // { date: 20190611, img_src: '/img/20190611.jpg', caption: '' },
-    // { date: 20190610, img_src: '/img/20190610.jpg', caption: '' },
+    { date: 20190610, img_src: '/img/20190610.jpg', caption: '' },
     { date: 20190609, img_src: '/img/20190609.jpg', caption: '' },
     { date: 20190608, img_src: '/img/20190608.jpg', caption: '' },
     { date: 20190607, img_src: '/img/20190607.jpg', caption: '' },
