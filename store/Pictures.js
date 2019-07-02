@@ -1,5 +1,12 @@
 export const state = () => ({
   list: [
+    // { date: 20190707, img_src: '/img/20190707.jpg', caption: '' },
+    // { date: 20190706, img_src: '/img/20190706.jpg', caption: '' },
+    // { date: 20190705, img_src: '/img/20190705.jpg', caption: '' },
+    // { date: 20190704, img_src: '/img/20190704.jpg', caption: '' },
+    // { date: 20190703, img_src: '/img/20190703.jpg', caption: '' },
+    // { date: 20190702, img_src: '/img/20190702.jpg', caption: '' },
+    // { date: 20190701, img_src: '/img/20190701.jpg', caption: '' },
     // { date: 20190630, img_src: '/img/20190630.jpg', caption: '' },
     // { date: 20190629, img_src: '/img/20190629.jpg', caption: '' },
     // { date: 20190628, img_src: '/img/20190628.jpg', caption: '' },
