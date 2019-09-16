@@ -1,7 +1,5 @@
 export const state = () => ({
   list: [
-    { date: 20190809, img_src: '/img/20190809.jpg', caption: '' },
-    { date: 20190808, img_src: '/img/20190808.jpg', caption: '' },
     { date: 20190807, img_src: '/img/20190807.jpg', caption: '' },
     { date: 20190806, img_src: '/img/20190806.jpg', caption: '' },
     { date: 20190805, img_src: '/img/20190805.jpg', caption: '' },
